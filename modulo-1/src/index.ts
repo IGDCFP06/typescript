@@ -1,0 +1,16 @@
+import { calcularMedia, calcularMediana, filtrarAtipicos } from "./math-utils.js";
+
+const muestras = [12.4, 8.9, 15.0, 13.2, 11.7, 50.5, 10.9];
+
+const media = calcularMedia(muestras);
+const mediana = calcularMediana(muestras);
+const atipicos = filtrarAtipicos(muestras, 1.8);
+
+console.log("Muestras:", muestras);
+console.log("Media:", media);
+console.log("Mediana:", mediana);
+console.log("Valores atipicos (z-score > 1.8):", atipicos);
+
+const sinDatos: number[] = [];
+console.log("Media con array vacio:", calcularMedia(sinDatos));
+console.log("Mediana con array vacio:", calcularMediana(sinDatos));
